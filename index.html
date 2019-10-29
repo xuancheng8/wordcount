@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordCount.js</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="wordcount.js"></script>
+    <script type="text/javascript">
+    function loadDemo() {
+      word=null;
+      
+
+      WordCount.words("testing", function(wood1){
+        document.getElementById("wood").innerText = wood1;
+        word = wood1;
+        console.log(word);
+        //window.alert(word);
+      })
+      
+    }
+
+    function tester(){
+      window.alert(word);
+    }
+    </script>
+
+
+  </head>
+  <body onload="loadDemo()">
+
+    <input type="file" id="testing"/>
+    <div><p>Number of words: <span id="wood"></span></p> </div>
+    <div><input type="button" onclick="tester()" value="Magic"></input>
+</div>
+</body>
+</html>
